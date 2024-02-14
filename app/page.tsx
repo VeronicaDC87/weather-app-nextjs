@@ -3,7 +3,8 @@ import Image from "next/image";
 import Navbar from "./component/Navbar";
 import { useQuery } from "react-query";
 import axios from "axios";
-import { format, parseISO } from "date-fns";
+import { format, formatDistanceStrict, formatDistanceToNow, formatDistanceToNowStrict, formatISO, parseISO } from "date-fns";
+import { formatDistance } from "date-fns/fp";
 
 type WeatherData = {
   cod: string;
