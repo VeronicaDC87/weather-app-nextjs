@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "./component/Navbar";
 import { useQuery } from "react-query";
 import axios from "axios";
+import { format, parseISO } from "date-fns";
 
 type WeatherData = {
   cod: string;
@@ -106,7 +107,7 @@ const FirstData = data?.list[0]
       <section>
         <div>
           <h2 className="flex gap-1 text-2xl items-end">
-            <p> </p> 
+            <p> {format(parseISO(FirstData?.dt_txt ?? ""), "EEEE")} </p> 
 
           </h2>
         </div>
