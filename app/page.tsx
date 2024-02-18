@@ -121,7 +121,7 @@ const FirstData = data?.list[0]
                 <div key={i}
                 className="flex flex-col justify-between gap-2 items-center text-xs font-semibold"></div>
               ))}  
-            <span className="text-5-xl">
+            <span className="text-5xl">
               {convertoKelvintoCelcius(FirstData?.main.temp ?? 296.37)}°
               </span>
               <p className="text-xs space-x-1 whitespace-nowrap">
